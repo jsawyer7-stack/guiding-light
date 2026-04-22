@@ -1,0 +1,76 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where Decap stores uploaded images (client uses the "Media" button in the editor)
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Friendly branding
+site_url: https://guidinglightnc.com
+display_url: https://guidinglightnc.com
+logo_url: /assets/hero-worship.jpg
+
+# One collection: Events. A single JSON file containing an ordered list of events.
+collections:
+  - name: events
+    label: "Events"
+    description: "Add, edit, reorder, or remove events. Changes go live after you click Publish."
+    files:
+      - file: "content/events.json"
+        label: "All Events"
+        name: "events_file"
+        format: "json"
+        fields:
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date_display}}"
+            label_singular: "Event"
+            add_to_top: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Date (friendly text shown on the card)"
+                name: "date_display"
+                widget: "string"
+                hint: "e.g. 'May 4–8, 2026 · Nightly 7 PM' or 'Sundays at 11:30 AM'"
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                default: "General"
+                options:
+                  - "Revival"
+                  - "Community"
+                  - "Youth"
+                  - "Children"
+                  - "Christmas"
+                  - "Easter"
+                  - "Thanksgiving"
+                  - "Women"
+                  - "Men"
+                  - "General"
+                hint: "Picks a color tone for the card. If you upload an image below, the image shows instead."
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                hint: "2–3 sentences. What is it, when, who is it for?"
+              - label: "Image (optional)"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "Upload a flyer or photo. If you leave this blank, the card uses the category color."
+              - label: "Feature on homepage"
+                name: "featured"
+                widget: "boolean"
+                default: false
+                hint: "Check this to show on the homepage 'Upcoming' section (3 featured events)."
+              - label: "Action link text (optional)"
+                name: "link_text"
+                widget: "string"
+                required: false
+                hint: "e.g. 'Register', 'Sign up', 'Learn more'. Leave blank to hide the link."
+              - label: "Action link URL (optional)"
+                name: "link_url"
+                widget: "string"
+                required: false
+                hint: "Where the action link goes. e.g. 'contact.html' or a full URL like 'https://example.com/register'."

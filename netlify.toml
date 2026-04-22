@@ -1,0 +1,24 @@
+# Netlify deploy config for Guiding Light Apostolic Church
+# ——————————————————————————————————————————————————————————
+# Static site — no build step. Just publish the project root.
+
+[build]
+  publish = "."
+
+# Keep /admin out of the indexed site for search engines
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Basic cache hints for static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, must-revalidate"
+
+# Never cache the events JSON (so republishes show up immediately)
+[[headers]]
+  for = "/content/events.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

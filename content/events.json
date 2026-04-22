@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "title": "Spring Revival 2026",
+      "date_display": "May 4–8, 2026 · Nightly 7 PM",
+      "category": "Revival",
+      "description": "Five nights of Spirit-filled preaching, worship, and altar ministry. Guest ministers from across the region — all are welcome.",
+      "image": "",
+      "featured": true,
+      "link_text": "Learn more",
+      "link_url": "events.html"
+    },
+    {
+      "title": "Community Day",
+      "date_display": "June 13, 2026 · 12–4 PM",
+      "category": "Community",
+      "description": "A day of food, fun, and fellowship for all of Camden County. Free lunch, inflatables for the kids, and gospel music.",
+      "image": "",
+      "featured": true,
+      "link_text": "Register free",
+      "link_url": "events.html"
+    },
+    {
+      "title": "Summer Youth Retreat",
+      "date_display": "July 21–24, 2026 · Retreat Grounds",
+      "category": "Youth",
+      "description": "Four days away. A generation encountering Christ. Worship, teaching, sports, and friendships that last. 12–18 years.",
+      "image": "",
+      "featured": true,
+      "link_text": "Sign up your student",
+      "link_url": "events.html"
+    },
+    {
+      "title": "Backpack Giveaway",
+      "date_display": "August 8, 2026 · 10 AM",
+      "category": "Children",
+      "description": "Free backpacks and school supplies for families in Camden County. Every child sent off blessed.",
+      "image": "",
+      "featured": false,
+      "link_text": "",
+      "link_url": ""
+    },
+    {
+      "title": "Community Thanksgiving Dinner",
+      "date_display": "November 22, 2026",
+      "category": "Thanksgiving",
+      "description": "A free, home-cooked meal for anyone in the community. Come hungry, leave full — in every way.",
+      "image": "",
+      "featured": false,
+      "link_text": "",
+      "link_url": ""
+    },
+    {
+      "title": "Christmas Eve Service",
+      "date_display": "December 24, 2026 · 7 PM",
+      "category": "Christmas",
+      "description": "Carols, candles, and the timeless story of Emmanuel — God with us. A family favorite.",
+      "image": "",
+      "featured": false,
+      "link_text": "",
+      "link_url": ""
+    }
+  ]
+}
