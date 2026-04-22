@@ -1,6 +1,16 @@
 {
   "events": [
     {
+      "category": "Youth",
+      "featured": true,
+      "title": "East Coast Awakening ",
+      "image": "/assets/uploads/aw26_1920x1080.png",
+      "date_display": "May 29-31, 2026",
+      "link_url": "https://linktr.ee/awakening26?utm_source=linktree_profile_share&ltsid=28c0e0a2-18de-4460-b4e8-962590162d36",
+      "link_text": "Linktree",
+      "description": "East Coast Awakening\nIt's more than a conference—it’s a call to a generation. In the Bible, God used young people to shift entire generations. We believe He’s doing it again."
+    },
+    {
       "title": "Spring Revival 2026",
       "date_display": "May 4–8, 2026 · Nightly 7 PM",
       "category": "Revival",
