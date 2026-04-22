@@ -1006,8 +1006,18 @@ h4, .h4 {
 }
 .ministry.wide { grid-column: span 8; aspect-ratio: 8 / 5; }
 .ministry.half { grid-column: span 6; aspect-ratio: 6 / 5; }
+/* When a small card is an immediate sibling of a .wide (same row in the 8+4 layout),
+   stretch it to match the wide card's height. The grid gap makes aspect-ratio math
+   diverge by ~10px otherwise. */
+.ministry.wide + .ministry:not(.wide),
+.ministry:not(.wide):has(+ .ministry.wide) {
+  aspect-ratio: auto;
+  height: 100%;
+}
 @media (max-width: 860px) {
   .ministry, .ministry.wide, .ministry.half { grid-column: span 12; aspect-ratio: 4 / 3; }
+  .ministry.wide + .ministry:not(.wide),
+  .ministry:not(.wide):has(+ .ministry.wide) { aspect-ratio: 4 / 3; height: auto; }
 }
 .ministry-bg {
   position: absolute;
