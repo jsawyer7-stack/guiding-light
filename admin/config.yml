@@ -11,14 +11,15 @@ site_url: https://guidinglightnc.com
 display_url: https://guidinglightnc.com
 logo_url: /assets/hero-worship.jpg
 
-# One collection: Events. A single JSON file containing an ordered list of events.
 collections:
   - name: events
     label: "Events"
-    description: "Add, edit, reorder, or remove events. Changes go live after you click Publish."
+    description: "Add or edit events. Click Publish to save."
+    editor:
+      preview: false
     files:
       - file: "content/events.json"
-        label: "All Events"
+        label: "Open events list"
         name: "events_file"
         format: "json"
         fields:
@@ -30,10 +31,10 @@ collections:
             add_to_top: true
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - label: "Date (friendly text shown on the card)"
+              - label: "Date"
                 name: "date_display"
                 widget: "string"
-                hint: "e.g. 'May 4–8, 2026 · Nightly 7 PM' or 'Sundays at 11:30 AM'"
+                hint: "e.g. May 4–8, 2026 · Nightly 7 PM"
               - label: "Category"
                 name: "category"
                 widget: "select"
@@ -49,28 +50,28 @@ collections:
                   - "Women"
                   - "Men"
                   - "General"
-                hint: "Picks a color tone for the card. If you upload an image below, the image shows instead."
+                hint: "Color tone for the card (used when no image is uploaded)."
               - label: "Description"
                 name: "description"
                 widget: "text"
-                hint: "2–3 sentences. What is it, when, who is it for?"
-              - label: "Image (optional)"
+                hint: "2–3 sentences."
+              - label: "Image"
                 name: "image"
                 widget: "image"
                 required: false
-                hint: "Upload a flyer or photo. If you leave this blank, the card uses the category color."
-              - label: "Feature on homepage"
+                hint: "Optional. If blank, the card uses the category color."
+              - label: "Featured"
                 name: "featured"
                 widget: "boolean"
                 default: false
-                hint: "Check this to show on the homepage 'Upcoming' section (3 featured events)."
-              - label: "Action link text (optional)"
+                hint: "Shows on the homepage 'Upcoming' section."
+              - label: "Link text"
                 name: "link_text"
                 widget: "string"
                 required: false
-                hint: "e.g. 'Register', 'Sign up', 'Learn more'. Leave blank to hide the link."
-              - label: "Action link URL (optional)"
+                hint: "Optional. e.g. 'Register', 'Sign up'."
+              - label: "Link URL"
                 name: "link_url"
                 widget: "string"
                 required: false
-                hint: "Where the action link goes. e.g. 'contact.html' or a full URL like 'https://example.com/register'."
+                hint: "Optional. Where the link goes (e.g. contact.html or a full URL)."
