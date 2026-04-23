@@ -125,12 +125,24 @@
   }
 
   /* ——— FAQ ——— */
+  const setFaqHeight = (item, open) => {
+    const a = item.querySelector('.faq-a');
+    a.style.maxHeight = open ? a.scrollHeight + 'px' : '0';
+  };
+  // Prime any initially-open FAQs so they animate from the right height later
+  document.querySelectorAll('.faq.is-open').forEach(item => setFaqHeight(item, true));
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq');
-      const open = item.classList.contains('is-open');
-      item.parentElement.querySelectorAll('.faq.is-open').forEach(i => i.classList.remove('is-open'));
-      if (!open) item.classList.add('is-open');
+      const wasOpen = item.classList.contains('is-open');
+      item.parentElement.querySelectorAll('.faq.is-open').forEach(i => {
+        i.classList.remove('is-open');
+        setFaqHeight(i, false);
+      });
+      if (!wasOpen) {
+        item.classList.add('is-open');
+        setFaqHeight(item, true);
+      }
     });
   });
 

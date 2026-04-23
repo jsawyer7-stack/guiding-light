@@ -1527,12 +1527,11 @@ h4, .h4 {
 .faq-a {
   max-height: 0;
   overflow: hidden;
-  color: var(--ink-500);
-  transition: max-height 0.55s var(--ease), opacity 0.3s, margin 0.3s;
   opacity: 0;
+  color: var(--ink-500);
+  transition: max-height 0.35s var(--ease), opacity 0.25s, margin 0.3s;
 }
 .faq.is-open .faq-a {
-  max-height: 600px;
   opacity: 1;
   margin-top: 1rem;
 }
