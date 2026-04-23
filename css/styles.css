@@ -306,33 +306,10 @@ h4, .h4 {
   letter-spacing: -0.005em;
 }
 .logo-mark {
-  width: 42px; height: 42px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, var(--honey-300), var(--honey-500) 55%, var(--honey-700));
-  position: relative;
+  width: 44px; height: 44px;
   flex-shrink: 0;
-  box-shadow: 0 6px 18px -6px rgba(212, 164, 76, 0.6), inset 0 0 0 1px rgba(255,255,255,0.2);
+  background: url('../assets/logo.svg') center/contain no-repeat;
 }
-.logo-mark::after {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 35%, rgba(255,255,255,0.6), transparent 55%),
-    linear-gradient(180deg, var(--honey-400), var(--honey-600));
-}
-.logo-mark::before {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  background: conic-gradient(from 220deg, transparent 0deg, rgba(212, 164, 76, 0.4) 40deg, transparent 80deg, transparent 360deg);
-  filter: blur(6px);
-  z-index: -1;
-  animation: logo-halo 10s linear infinite;
-}
-@keyframes logo-halo { to { transform: rotate(360deg); } }
 
 .logo-text { display: flex; flex-direction: column; gap: 2px; }
 .logo-text .t1 { font-size: 1.05rem; letter-spacing: -0.005em; line-height: 1; }
